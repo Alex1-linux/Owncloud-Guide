@@ -125,6 +125,7 @@ apt-get update
 Nano/etc/apache2/sites.available/000-default.conf
 ```
 ![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Apache1.JPG)
+
 2.  Change the Document Root to point to the ownCloud files as shown by pointer 1 in the above figure.
 3.	Restart apache2 server to reflect the changes.
 ```
