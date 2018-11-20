@@ -174,7 +174,7 @@ Service apache2 restart
 To complete the installation, a connection from a browser to ownCloud server need to be established.
 1.	Find out the ipaddress of the ubuntu server.
 Ifconfig
-2.	Open a browser and type in
+2.	Open a browser and type in the format
 http://ipaddress/owncloud
 3.	In the page that opens up 
 
@@ -201,6 +201,20 @@ chown -R www-data:www-data /var/www/owncloud/
 
 2.	Click “admin” in the top right corner of the page that opens, as shown by pointer 1 in the above figure.
 3.	Click “Users” in the dropdown menu, as shown by pointer 2 in the above figure.
+
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/1.jpg)
+
+4.	In the User administration page that opens, add the username in the field marked by pointer 1 as shown in the above figure.
+5.	Enter the email id of the user in the second field as shown by pointer 2 in the above figure.
+6.	Click the button “Create” to create the user account.
+7.	Check whether the newly created username is listed in the main section of the page. The username cannot be edited.
+8.	Enter the full name of the user in the field marked by pointer 4. The full name can be edited.
+9.	Enter the password of the user in the field marked by pointer 5. Password can be changed.
+10.	Add the user to an existing group or a newly created group, selected from the drop-down menu as shown by pointer 6.
+11.	Make the user a group admin for any group with delegated powers by selecting the group from the drop-down menu as shown by  pointer 7.
+12.	 Allocate space to the user from the default quota or a specified quota in the drop-down menu shown by pointer 8.
+
+
 
 
 
