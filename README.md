@@ -174,7 +174,7 @@ Service apache2 restart
 To complete the installation, a connection from a browser to ownCloud server need to be established.
 1.	Find out the ipaddress of the ubuntu server.
 Ifconfig
-2.	Open a browser and type in the format
+2.	Open a browser and type the URL in the format
 http://ipaddress/owncloud
 3.	In the page that opens up 
 
@@ -222,6 +222,7 @@ nano /etc/apache2/ports.conf
 ![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/portsconf.JPG)
 
 Add the statement to listen to port 8080 as shown by pointer 1 in the above figure. 
+
 2.	Restart apache.
 ```
 Service apache2 restart
@@ -233,16 +234,22 @@ nano/etc/apache2/sites-enabled/000-default.conf
 ```
 ![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/port2.JPG)
 
+Change the virtual host port number to 8080 as shown by pointer 1 in the above figure.
 
+4.	Restart apache.
+```
+Service apache2 restart
+```
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Userlogin8080.JPG)
 
+5.	Open a browser and type the URL in the format http://ipaddress:8080 
+as shown by pointer 1 in the above figure.
+6.	Login with the Username and Password
 
-
-  
-  
-  
-  
-  
-  
+## 5.	Accessing OwnCloud server as a user from a desktop client
+1.	Open a browser and type the URL in the format http://ipaddress:8080 as shown by pointer 1 in the above figure.
+2.	Enter your Username and Password in the space provided to login. See pointer 2 in the above figure.
+Note: ownCloud supports the following browsers. Firefox 62, Chrome 68+, Internet Explorer 11+,Safari 11,Edge  
   
   
   
