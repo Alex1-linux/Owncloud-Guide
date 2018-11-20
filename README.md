@@ -194,6 +194,14 @@ http://ipaddress/owncloud
 ```
 chown -R www-data:www-data /var/www/owncloud/
 ```
+## 3.	Addition of a User
+1.	Login as administrator.
+
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Usercreation1.JPG)
+
+2.	Click “admin” in the top right corner of the page that opens, as shown by pointer 1 in the above figure.
+3.	Click “Users” in the dropdown menu, as shown by pointer 2 in the above figure.
+
 
 
 
