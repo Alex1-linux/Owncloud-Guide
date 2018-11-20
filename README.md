@@ -86,6 +86,51 @@ apt-get install php7.2-gd
 phpenmod gd 
 ```
 #### 3.	Creation of Database and Database user 
+1.	Login to the installed MySql server using the password created at the time of installation.
+```
+mysql -u root -p
+```
+2.	Create a database for ownCloud.
+```
+CREATE DATABASE owncloud;
+```
+3.	Create a system user for ownCloud in Mysql and Create a password for system user. 
+```
+CREATE USER ‘owncloud’@’localhost’ IDENTIFIED by ‘Create a password for system user’;
+```
+4.	Grant permission to system user.
+```
+GRANT ALL ON owncloud.*TO ‘owncloud’@’localhost’ WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit
+```
+#### 4.	Installation of ownCloud
+1.	Get the registry key from ownCloud website
+```
+wget -nv  https://download.owncloud.org/download/repositories/production/Ubuntu_16.04/Release.key -O Release.key
+apt-key add - < Release.key
+```
+2.	Add the registry key to the repository.
+```
+echo 'deb http://download.owncloud.org/download/repositories/production/Ubuntu_16.04/ /' > /etc/apt/sources.list.d/owncloud.list
+```
+3.	Install ownCloud.
+```
+apt-get install owncloud-files
+apt-get update
+```
+#### 5.	Configuration of Apache Web server
+1.	Modify Apache2 configuration file to reflect the location of the ownCloud files.
+```
+Nano/etc/apache2/sites.available/000-default.conf
+```
+![w]{C:\Users\Eternal\Desktop\Owncloud\Apache 1}
+
+
+
+ 
+2.	Change the Document Root to point to the ownCloud files as shown by pointer 1 in the above figure.
+3.	Restart apache2 server to reflect the changes.
 
   
   
