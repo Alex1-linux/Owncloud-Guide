@@ -52,14 +52,14 @@ php7.2-sqlite3 php7.2-xml php7.2-zip
   apt-get update
   ```
   3.	Verify whether all the required PHP modules as listed in https://doc.owncloud.com/server/10.0/admin_manual/installation/source_installation.html are installed 
-```
-php -m | grep -i <module_name> 
-```
-4.	Edit php configuration file to increase the memory limit
-```
-nano /etc/php/7.2/apache2/php.in
-```
-    Increase the memory to 256 MB by editing the line memory-limit =265 M
+  ```
+  php -m | grep -i <module_name> 
+  ```
+  4.	Edit php configuration file to increase the memory limit
+  ```
+  nano /etc/php/7.2/apache2/php.in
+  ```
+  Increase the memory to 256 MB by editing the line memory-limit =265 M
 
 ## Tips
 *1.	The correct version of PHP should also be enabled and configured for ownCloud to load properly.
@@ -120,9 +120,12 @@ apt-get install owncloud-files
 apt-get update
 ```
 #### 5.	Configuration of Apache Web server
-1.	Modify Apache2 configuration file to reflect the location of the ownCloud files.
-![]{https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Apache1.JPG}
-  
+1.  Modify Apache2 configuration file to reflect the location of the ownCloud files.
+```
+Nano/etc/apache2/sites.available/000-default.conf
+```
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Apache1.JPG)
+
   
   
   
