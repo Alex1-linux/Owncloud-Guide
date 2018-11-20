@@ -177,7 +177,24 @@ Ifconfig
 2.	Open a browser and type in
 http://ipaddress/owncloud
 3.	In the page that opens up 
+
 ![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/welcome1.JPG)
+
+    
+   a.	Create an admin login. Enter a user name and password in the box provided. See pointer 1 in the above figure.
+   
+   b.	Click on “Storage & Database”. See pointer 2 in the above figure.
+        Enter the name of the database and the system user name.
+        
+   c. Click the button “Finish setup” to complete the installation. See pointer 3 in the above figure.
+   
+ ## Tips 
+*If an error “Cannot write into "config" directory!” is seen in the ownCloud webpage at the time of the completion of the installation, it means there is a permission issue in accessing the ownCloud configuration directory. This can be solved by giving permission to the HTTP system user.*
+
+```
+chown -R www-data:www-data /var/www/owncloud/
+```
+
 
 
 
