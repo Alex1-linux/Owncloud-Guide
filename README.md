@@ -214,7 +214,24 @@ chown -R www-data:www-data /var/www/owncloud/
 11.	Make the user a group admin for any group with delegated powers by selecting the group from the drop-down menu as shown by  pointer 7.
 12.	 Allocate space to the user from the default quota or a specified quota in the drop-down menu shown by pointer 8.
 
+## 4.	Steps to be followed for changing the port number
+1.	Add the new port number in the file ports.conf in directory apache2. 
+```
+nano /etc/apache2/ports.conf
+```
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/portsconf.JPG)
 
+Add the statement to listen to port 8080 as shown by pointer 1 in the above figure. 
+2.	Restart apache.
+```
+Service apache2 restart
+```
+3.	Change the virtual host port number in 000-default.conf.
+
+```
+nano/etc/apache2/sites-enabled/000-default.conf
+```
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/port2.JPG)
 
 
 
