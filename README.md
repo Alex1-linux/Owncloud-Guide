@@ -125,6 +125,52 @@ apt-get update
 Nano/etc/apache2/sites.available/000-default.conf
 ```
 ![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Apache1.JPG)
+2.  Change the Document Root to point to the ownCloud files as shown by pointer 1 in the above figure.
+3.	Restart apache2 server to reflect the changes.
+```
+Service apache2 restart
+```
+4.	Create an ownCloud configuration file in the sites.available directory in apache 2 files.
+```
+touch /etc/apache2/sites.available/owncloud.conf
+```
+5.	Add the following paths in it.
+```
+Alias /owncloud "/var/www/owncloud/"
+<Directory /var/www/owncloud/>
+  Options +FollowSymlinks
+  AllowOverride All
+ <IfModule mod_dav.c>
+  Dav off
+ </IfModule>
+ SetEnv HOME /var/www/owncloud
+ SetEnv HTTP_HOME /var/www/owncloud
+</Directory>
+```
+6.	Create Symbolic links from the above configuration file to mods-enabled and sites-enabled directories in apache2 directory.
+```
+ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/mods-enabled/owncloud.conf
+ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/owncloud.conf
+```
+7.	Restart apache2 server to reflect the changes.
+```
+Service apache2 restart
+```
+8.	Enable the site and the apache modules with the following commands
+```
+a2ensite owncloud.conf
+a2ensite rewrite
+a2ensite headers
+a2ensite env
+a2ensite dir
+a2ensite mime
+```
+9.	Restart apache2 server to reflect the changes.
+```
+Service apache2 restart
+```
+
+
 
   
   
