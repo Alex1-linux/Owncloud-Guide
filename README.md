@@ -170,6 +170,14 @@ a2ensite mime
 ```
 Service apache2 restart
 ```
+#### 6.	Completion of the installation from a Web Browser
+To complete the installation, a connection from a browser to ownCloud server need to be established.
+1.	Find out the ipaddress of the ubuntu server.
+Ifconfig
+2.	Open a browser and type in
+http://ipaddress/owncloud
+3.	In the page that opens up 
+![](https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/welcome1.JPG)
 
 
 
