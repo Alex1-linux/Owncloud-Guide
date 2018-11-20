@@ -121,7 +121,7 @@ apt-get update
 ```
 #### 5.	Configuration of Apache Web server
 1.	Modify Apache2 configuration file to reflect the location of the ownCloud files.
-![]{Owncloud-Guide/images/Apache%20%1.JPG}
+[]{https://github.com/Alex1-linux/Owncloud-Guide/blob/gh-pages/images/Apache1.JPG}
   
   
   
