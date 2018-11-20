@@ -121,17 +121,7 @@ apt-get update
 ```
 #### 5.	Configuration of Apache Web server
 1.	Modify Apache2 configuration file to reflect the location of the ownCloud files.
-```
-Nano/etc/apache2/sites.available/000-default.conf
-```
-![w]{C:\Users\Eternal\Desktop\Owncloud\Apache 1}
-
-
-
- 
-2.	Change the Document Root to point to the ownCloud files as shown by pointer 1 in the above figure.
-3.	Restart apache2 server to reflect the changes.
-
+![]{Owncloud-Guide/images/Apache%20%1.JPG}
   
   
   
